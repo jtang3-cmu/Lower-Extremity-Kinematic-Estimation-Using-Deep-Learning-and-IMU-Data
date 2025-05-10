@@ -1,0 +1,40 @@
+{
+    "Experiment name": "transformer_layers1_dmodel64_heads1_ff64_drop0.15025449944981872_lr0.009961933939165732_decay0.9780207011165534_iter5000",
+    "Model ": {
+        "input_linear": "Linear(in_features=16, out_features=64, bias=True)",
+        "layers": "ModuleList(\n  (0): TransformerEncoderLayerRoPE(\n    (self_attn): MultiHeadAttentionRoPE(\n      (qkv_proj): Linear(in_features=64, out_features=192, bias=True)\n      (out_proj): Linear(in_features=64, out_features=64, bias=True)\n    )\n    (linear1): Linear(in_features=64, out_features=64, bias=True)\n    (dropout): Dropout(p=0.15025449944981872, inplace=False)\n    (linear2): Linear(in_features=64, out_features=64, bias=True)\n    (norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)\n    (norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)\n    (dropout1): Dropout(p=0.15025449944981872, inplace=False)\n    (dropout2): Dropout(p=0.15025449944981872, inplace=False)\n  )\n)",
+        "out_linear": "Linear(in_features=64, out_features=3, bias=True)"
+    },
+    "Optimizer ": {
+        "Type ": "Adam",
+        "lr": 0.009961933939165732,
+        "betas": [
+            0.9,
+            0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null
+    },
+    "LR schedule ": {
+        "Type ": "ExponentialLR",
+        "Gamma ": 0.9780207011165534
+    },
+    "Training information ": {
+        "Stage 0": {
+            "Number of iterations ": 5000,
+            "Batch size ": 2,
+            "Sequence length ": 50
+        },
+        "Stage 1": {
+            "Number of iterations ": 5000,
+            "Batch size ": 4,
+            "Sequence length ": 100
+        }
+    }
+}
